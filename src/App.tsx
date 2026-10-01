@@ -1,0 +1,2 @@
+import {Routes,Route} from 'react-router-dom';import Layout from './components/Layout';import Home from './pages/Home';import Solutions from './pages/Solutions';import Quote from './pages/Quote';import Support from './pages/Support';import NotFound from './pages/NotFound'
+export default function App(){return(<Layout><Routes><Route path="/" element={<Home/>}/><Route path="/solutions" element={<Solutions/>}/><Route path="/quote" element={<Quote/>}/><Route path="/support" element={<Support/>}/><Route path="*" element={<NotFound/>}/></Routes></Layout>)}
