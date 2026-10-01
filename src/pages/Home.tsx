@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {Link} from 'react-router-dom';import {CheckCircle2,Home as H,Building2,Factory,ShieldCheck} from 'lucide-react';import {site,stats,capabilities,features,brandGroups,clients,sectors} from '../data/site'
 const slug=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')
 function Logo({src,name,h}:{src:string,name:string,h:string}){const [ok,setOk]=useState(true);return ok?<img src={src} alt={name} className={h+' w-auto object-contain'} onError={()=>setOk(false)}/>:<span>{name}</span>}
