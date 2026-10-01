@@ -1,5 +1,5 @@
-import {useState} from 'react'
-import {Link} from 'react-router-dom';import {CheckCircle2,Home as H,Building2,Factory,ShieldCheck} from 'lucide-react';import {site,stats,capabilities,features,brandGroups,clients,sectors} from '../data/site'
+import {useState} from 'react';import {Link} from 'react-router-dom';import {CheckCircle2,Home as H,Building2,Factory,ShieldCheck} from 'lucide-react';import {site,stats,capabilities,features,brandGroups,clients,sectors} from '../data/site'
+const icons=[H,Building2,Factory]
 const slug=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')
 function Logo({src,name,h}:{src:string,name:string,h:string}){const [ok,setOk]=useState(true);return ok?<img src={src} alt={name} className={h+' w-auto object-contain'} onError={()=>setOk(false)}/>:<span>{name}</span>}
 export const Head=({t,s}:{t:string,s?:string})=><div className="text-center mb-10"><h2 className="text-3xl md:text-4xl font-extrabold gradient-text">{t}</h2>{s&&<p className="text-muted mt-2">{s}</p>}</div>
